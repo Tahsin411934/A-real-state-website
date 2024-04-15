@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const Estate = ({ estate }) => {
   const {
+    id,
     estate_title,
     segment_name,
     description,
@@ -32,7 +33,7 @@ const Estate = ({ estate }) => {
           
           
           <div className="card-actions">
-           <Link><button className="btn btn-primary">View Property</button></Link> 
+           <Link to={`/viewProperty/${id}`} ><button className="btn btn-primary">View Property</button></Link> 
           </div>
         </div>
       </div>
