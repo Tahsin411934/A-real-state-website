@@ -19,9 +19,9 @@
       "price": "$2,500 ",
       "status": "rent",
       "area": "1000 sq ft",
-      "location": "New York City, New York",
+      "location": "New York City",
       "facilities": ["Balcony", "Gym access", "Laundry facilities", "24/7 security"],
-      "image": "urban_apartment.jpg"
+      "image": "https://i.ibb.co/vm48NHc/webaliser-TPTXZd9m-Oo-unsplash-1.jpg"
     },
     {
       "id": 3,
@@ -45,7 +45,7 @@
       "area": "1800 sq ft",
       "location": "Seattle, Washington",
       "facilities": ["Rooftop terrace", "Smart home technology", "Attached garage", "Walk-in closet"],
-      "image": "modern_townhouse.jpg"
+      "image": "https://i.ibb.co/8063pfQ/krystal-black-V5-OEp-F12pzw-unsplash.jpg"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "area": "Varies",
       "location": "Scottsdale, Arizona",
       "facilities": ["Clubhouse", "Fitness center", "Swimming pool", "Planned social activities"],
-      "image": "senior_living_community.jpg"
+      "image": "https://i.ibb.co/XCjk3Kf/douglas-sheppard-9r-Yf-G8s-WRVo-unsplash.jpg"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "area": "Varies",
       "location": "College Station, Texas",
       "facilities": ["Study lounges", "Fitness center", "Game room", "Outdoor recreational areas"],
-      "image": "student_housing.jpg"
+      "image": "https://i.ibb.co/HtFP12K/francesca-tosolini-Xc-Vm8mn7-NUM-unsplash.jpg"
     },
     {
       "id": 7,
@@ -81,7 +81,7 @@
       "area": "3000 sq ft",
       "location": "Naples, Florida",
       "facilities": ["Gourmet dining", "Wellness center", "Concierge services", "Landscaped gardens"],
-      "image": "retirement_villa.jpg"
+      "image": "https://i.ibb.co/m601chR/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
       "area": "1500 sq ft",
       "location": "Lake Tahoe, California",
       "facilities": ["Lakefront views", "Outdoor fire pit", "Boating and fishing access", "Pet-friendly"],
-      "image": "cabin_retreat.jpg"
+      "image": "https://i.ibb.co/vm48NHc/webaliser-TPTXZd9m-Oo-unsplash-1.jpg"
     },
     {
       "id": 9,
@@ -105,7 +105,7 @@
       "area": "3000 sq ft",
       "location": "San Francisco, California",
       "facilities": ["Private terrace", "Panoramic city views", "Gourmet kitchen", "24/7 concierge"],
-      "image": "penthouse_apartment.jpg"
+      "image": "https://i.ibb.co/tP5tTW9/francesca-tosolini-6jap-TIj-UQo-I-unsplash.jpg"
     }
   ]
   
