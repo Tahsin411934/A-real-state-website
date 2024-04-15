@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Beachfront Villa",
+      "segment_name": "Vacation Rental",
+      "description": "Experience ultimate luxury and relaxation in this stunning beachfront villa. Featuring 5 bedrooms, 5 bathrooms, spacious living areas, private pool, and direct access to the beach. Perfect for family vacations or group getaways.",
+      "price": "$1,200 ",
+      "status": "rent",
+      "area": "5000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["Private beach access", "Pool", "Gourmet kitchen", "Outdoor dining area"],
+      "image": "https://i.ibb.co/DRHbgqW/avi-werde-h-Hz4yrvxwl-A-unsplash.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Cozy Urban Apartment",
+      "segment_name": "Apartment Rental",
+      "description": "Charming 2-bedroom apartment in the heart of the city. Fully furnished with modern amenities, including a fully equipped kitchen, comfortable living room, and balcony with city views. Close to restaurants, shops, and public transportation.",
+      "price": "$2,500 ",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "New York City, New York",
+      "facilities": ["Balcony", "Gym access", "Laundry facilities", "24/7 security"],
+      "image": "urban_apartment.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Spacious Family Home",
+      "segment_name": "Single-Family Home",
+      "description": "Beautiful 4-bedroom home perfect for families. Features include a large backyard, open-concept living area, gourmet kitchen, and master suite with walk-in closet. Located in a quiet neighborhood close to schools and parks.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Austin, Texas",
+      "facilities": ["Backyard", "Gourmet kitchen", "Walk-in closet", "Garage"],
+      "image": "https://i.ibb.co/42dZ40K/roam-in-color-z3-QZ6gj-GRt4-unsplash.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Modern Townhouse",
+      "segment_name": "Townhouse",
+      "description": "Sleek and stylish 3-bedroom townhouse with contemporary design. Features include a rooftop terrace, gourmet kitchen, attached garage, and smart home technology. Located in a vibrant neighborhood with easy access to amenities.",
+      "price": "$3,000 per month",
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "Seattle, Washington",
+      "facilities": ["Rooftop terrace", "Smart home technology", "Attached garage", "Walk-in closet"],
+      "image": "modern_townhouse.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Senior Living Community",
+      "segment_name": "Senior Living",
+      "description": "Welcome to our vibrant senior living community designed for active retirees. Enjoy resort-style amenities, including a clubhouse, fitness center, swimming pool, and planned social activities. Our spacious apartments offer comfort and convenience.",
+      "price": "Starting from $3,500 per month",
+      "status": "rent",
+      "area": "Varies",
+      "location": "Scottsdale, Arizona",
+      "facilities": ["Clubhouse", "Fitness center", "Swimming pool", "Planned social activities"],
+      "image": "senior_living_community.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Student Housing Complex",
+      "segment_name": "Student Housing",
+      "description": "Modern student housing complex offering furnished apartments and shared amenities. Located near campus, our community features study lounges, fitness center, game room, and outdoor recreational areas. Experience convenient and comfortable student living.",
+      "price": "Starting from $800 per month",
+      "status": "rent",
+      "area": "Varies",
+      "location": "College Station, Texas",
+      "facilities": ["Study lounges", "Fitness center", "Game room", "Outdoor recreational areas"],
+      "image": "student_housing.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Elegant Retirement Villa",
+      "segment_name": "Senior Living",
+      "description": "Discover luxury retirement living in this elegant villa community. Features include spacious floor plans, gourmet dining options, wellness center, and concierge services. Enjoy a fulfilling retirement lifestyle in a beautiful setting.",
+      "price": "$700,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Naples, Florida",
+      "facilities": ["Gourmet dining", "Wellness center", "Concierge services", "Landscaped gardens"],
+      "image": "retirement_villa.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Lakefront Cabin Retreat",
+      "segment_name": "Vacation Rental",
+      "description": "Escape to nature in this charming lakefront cabin retreat. Features rustic yet comfortable accommodations, breathtaking lake views, outdoor fire pit, and access to boating and fishing. Perfect for a peaceful getaway with family or friends.",
+      "price": "$300 per night",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Lake Tahoe, California",
+      "facilities": ["Lakefront views", "Outdoor fire pit", "Boating and fishing access", "Pet-friendly"],
+      "image": "cabin_retreat.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Luxury Penthouse Apartment",
+      "segment_name": "Apartment Rental",
+      "description": "Indulge in luxury living with this stunning penthouse apartment. Features include floor-to-ceiling windows, private terrace, gourmet kitchen, and panoramic city views. Located in a prestigious building with top-notch amenities.",
+      "price": "$8,000 per month",
+      "status": "rent",
+      "area": "3000 sq ft",
+      "location": "San Francisco, California",
+      "facilities": ["Private terrace", "Panoramic city views", "Gourmet kitchen", "24/7 concierge"],
+      "image": "penthouse_apartment.jpg"
+    }
+  ]
+  
