@@ -28,12 +28,13 @@ const Login = () => {
         
       })
       .catch((error) => {
-        toast.error("Registration failed! Please try again.");
+        
         const errorMessage = error.message;
         console.log(errorMessage)
         setLoading(false)
         navigate('/login')
-        
+        toast.error("Registration failed! Please try again.");
+        return 1;
       });
       navigate(location?.state? location.state: '/');
     console.log(data); 

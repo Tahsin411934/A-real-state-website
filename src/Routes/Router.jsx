@@ -6,6 +6,7 @@ import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Signup from "../Auth/SignUp/Signup";
 import Login from "../Auth/Login/Login";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
+import UpdateProfile from "../Auth/UpdateProfile/UpdateProfile";
 
 
 const Router = createBrowserRouter([
@@ -32,6 +33,12 @@ const Router = createBrowserRouter([
             {
                 path:"/login",
                 element:<Login></Login>
+            },
+            {
+                path:"/UpdateProfile",
+                element: <PrivateRoute>
+                    <UpdateProfile></UpdateProfile>
+                    </PrivateRoute>
             }
         ]
       },

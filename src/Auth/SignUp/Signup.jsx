@@ -8,14 +8,23 @@ import { Link } from 'react-router-dom';
 
 
 const Signup = () => {
-    const {createUser  }= UseAuth()
+    const {createUser, updateUserProfile,setUser }= UseAuth()
     const navigate = useNavigate()
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
     createUser(data.email, data.password)
+  
         .then((userCredential) => {
             const user = userCredential.user;
+            updateUserProfile(data.name, data.photoURL)
+            .then(() => {
+              setUser({ ...user, displayName: data.name, photoURL: data.photoURL });
+            })
+            .catch((error) => {
+              // An error occurred
+              // ...
+            });
             toast.success("Registration successful!"); // Display success toast
             reset();
             navigate("/");
@@ -29,7 +38,7 @@ const Signup = () => {
 
   return (
     <div className="w-96 mx-auto">
-        <ToastContainer />
+        
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control">
           <label className="label">

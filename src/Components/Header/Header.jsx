@@ -5,18 +5,22 @@ import UseAuth from "../../Hooks/UseAuth";
 const Header = () => {
 
     const { user, logOut } = UseAuth();
-    const navigate = useNavigate()
+    console.log(user)
     
-    const viewLink = user ? ( <>
+    const navigate = useNavigate()
+    console.log(user)
+    const viewLink = user ? ( <div className="flex gap-5">
         <button onClick={() => {
             logOut();
             navigate('/');
         }} className="hidden ml-5 font-semibold no-underline lg:inline-flex items-center justify-center px-4 py-2 text-base leading-6 text-white whitespace-no-wrap bg-[#04aa6d] rounded-md shadow-sm">
             Sign Out
         </button>
+        <div className="tooltip tooltip-bottom z-50" data-tip={user.displayName}>
+        <button className=""><img alt="" className="w-12  h-12 rounded-full ring-2 ring-offset-4 " src={user.photoURL} /></button>
+      </div>
         
-        
-        </>
+        </div>
     ) : (
         <>
             <Link to="/login">
@@ -38,7 +42,7 @@ const Header = () => {
             <NavLink className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline" to="/">
                 <li>Home</li>
             </NavLink>
-            <NavLink className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline" to="/listedBook">
+            <NavLink className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline" to="/UpdateProfile">
                 <li>Update Profile</li>
             </NavLink>
             
