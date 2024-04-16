@@ -13,7 +13,7 @@ const Estate = ({ estate }) => {
     facilities,
     image,
   } = estate;
-  console.log(estate);
+ 
   return (
     <div className="container mx-auto font-display">
       <div className="card w-96 bg-base-100 shadow-xl bg-contain bg-center">
