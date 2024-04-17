@@ -1,8 +1,98 @@
-# React + Vite
+# LuxeVillas Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to LuxeVillas, your premier destination for luxury property listings. This README provides an overview of the website's features and functionalities, along with instructions on how to navigate the codebase.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. [Navbar](#navbar)
+2. [Login Page](#login-page)
+3. [Register Page](#register-page)
+4. [Banner](#banner)
+5. [Footer](#footer)
+6. [Estate Section](#estate-section)
+7. [Estate Details](#estate-details)
+8. [404 Page](#404-page)
+9. [Extra Route](#extra-route)
+10. [Dynamic Title](#dynamic-title)
+11. [Challenges Requirements](#challenges-requirements)
+12. [Code Files](#code-files)
+
+
+### Navbar
+
+The Navbar is a crucial component of the website, providing navigation links and user authentication features. Here's what it includes:
+
+- **Website Name**: The name of the website, "LuxeVillas", is prominently displayed on the Navbar.
+- **Active Route Highlighting**: The Navbar highlights the active route, providing visual feedback to users about their current location within the website.
+- **User Profile**: If a user is logged in, their profile picture is displayed on the Navbar. Hovering over the profile picture reveals the user's name.
+- **Login/Logout Button**: The Navbar includes a conditional login/logout button. When a user is logged in, it shows a logout button, allowing users to sign out of their accounts. Upon clicking the logout button, users are redirected to the home page. If a user is not logged in, the Navbar displays a login button, which redirects users to the login page when clicked.
+
+### Login Page
+
+The Login Page is where users can authenticate themselves to access their accounts. Here's what it includes:
+
+- **Authentication Methods**: Users can log in using their email and password. Additionally, social media authentication methods such as Google login are implemented to provide users with alternative login options.
+- **Error Handling**: The login page handles authentication errors gracefully, displaying appropriate error messages if the email/password combination is incorrect.
+- **Registration Link**: For new users, a link is provided to the Register Page where they can create a new account.
+
+### Register Page
+
+The Register Page allows new users to create an account on the website. Here's what it includes:
+
+- **User Information**: Users are required to provide their name, email, and password to create an account.
+- **Password Verification**: Passwords must meet specific criteria, including the presence of uppercase and lowercase letters and a minimum length of 6 characters. If the password does not meet these criteria, an error message is displayed.
+- **Registration Link**: After successfully registering, users are directed to the Login Page to log in to their newly created accounts.
+
+### Banner
+
+The Banner section features a slider component that showcases various properties available on the website. Here's what it includes:
+
+- **Slider Component**: A slider component, implemented using the Swiper slider package, displays multiple property listings in a visually appealing and interactive manner.
+- **Property Listings**: Each slide in the slider displays images and key information about a specific property, such as its title, price, and location.
+
+### Footer
+
+The Footer appears at the bottom of every page and provides users with additional information and navigation options. Here's what it includes:
+
+- **Contact Information**: Contact details, including email address and phone number, are provided for users to reach out to the website administrators.
+- **Company Information**: Relevant information about the company or organization behind the website is displayed, helping users understand the context of the website.
+- **Navigation Links**: Links to important pages within the website, such as the home page, property listings, and user account settings, are included to facilitate navigation.
+
+### Estate Section
+
+The Estate Section displays various properties available for sale or rent. Here's what it includes:
+
+- **Property Categories**: Properties are categorized based on their type (e.g., Residential, Commercial).
+- **Property Listings**: Each property listing includes images, title, description, price, status (sale/rent), area, location, facilities, and a "View Property" button for more details.
+
+### Estate Details
+
+The Estate Details page provides in-depth information about a selected property. Here's what it includes:
+
+- **Detailed Information**: Detailed information about the selected property, including images, description, price, location, and facilities, is displayed.
+- **Protected Route**: Access to the Estate Details page is restricted to authenticated users. Unauthorized users are redirected to the Login Page.
+
+### 404 Page
+
+The 404 Page is displayed when a user navigates to a URL that does not exist on the website. Here's what it includes:
+
+- **Custom Error Message**: A friendly and informative message is displayed, informing users that the requested page could not be found.
+- **Navigation Options**: Links to the home page and other relevant pages are provided to help users continue navigating the website.
+
+### Extra Route
+
+An additional protected route is added to the website to provide users with meaningful and relevant content. Here's what it includes:
+
+- **Protected Content**: The content displayed on the extra route is accessible only to authenticated users.
+- **Meaningful Content**: The content of the extra route is carefully chosen to add value to the website and enhance the user experience.
+
+### Dynamic Title
+
+Dynamic titles are implemented for each page of the website using Firebase's `onAuthStateChanged` method. Here's what it includes:
+
+- **User Information**: Upon logging in, the user's name and profile picture are displayed in the Navbar. This information persists across page reloads.
+- **Loader**: While the user's information is being fetched, a loader is displayed to provide visual feedback to the user.
+
+### Challenges Requirements
+
+The challenges requirements are additional
