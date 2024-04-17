@@ -7,6 +7,7 @@ import Signup from "../Auth/SignUp/Signup";
 import Login from "../Auth/Login/Login";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 import UpdateProfile from "../Auth/UpdateProfile/UpdateProfile";
+import CustomerExperiences from "../Components/CustomerExperiences/CustomerExperiences";
 
 
 const Router = createBrowserRouter([
@@ -39,7 +40,13 @@ const Router = createBrowserRouter([
                 element: <PrivateRoute>
                     <UpdateProfile></UpdateProfile>
                     </PrivateRoute>
-            }
+            },
+            {
+                path:"/CustomerExperiences",
+                element: <PrivateRoute>
+                    <CustomerExperiences></CustomerExperiences>
+                    </PrivateRoute>
+            },
         ]
       },
 ])

@@ -62,8 +62,7 @@ const ViewProperty = () => {
                            
 
                         </div>
-                        {/* <button onClick={handleReadBtn} className="btn  mr-5 ">Read</button>
-                        <button onClick={handleWishListBtn} className="btn bg-[#50B1C9] text-[#fff]">WishList</button> */}
+                        
                     </div>
                 </div>
             </div>

@@ -1,88 +1,107 @@
-
-import { useForm } from 'react-hook-form';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-import {Helmet} from "react-helmet";
-import SocialLogin from '../../SocialLogin/SocialLogin';
-import UseAuth from '../../Hooks/UseAuth';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-
+import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet";
+import SocialLogin from "../../SocialLogin/SocialLogin";
+import UseAuth from "../../Hooks/UseAuth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-    const location = useLocation();
-    console.log(location);
+  
+  const [error, setError] = useState(null);
+  const location = useLocation();
 
-    const {signinUser, setLoading}= UseAuth()
-    console.log(setLoading)
 
-    const navigate = useNavigate();
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {  signinUser, setLoading } = UseAuth();
+ 
+
+  const navigate = useNavigate();
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = (data) => {
+    
     signinUser(data.email, data.password)
-    .then((userCredential) => {
-        
-        const user = userCredential.user;
-        
-        
+      .then(() => {
+        setLoading(true);
+        navigate(location?.state ? location.state : "/");
+        setLoading(false);
       })
       .catch((error) => {
-        
         const errorMessage = error.message;
-        console.log(errorMessage)
-        setLoading(false)
-        navigate('/login')
-        toast.error("Registration failed! Please try again.");
-        return 1;
+        toast.error(errorMessage);
+        setError(errorMessage);
+        setLoading(false);
+        reset()
+        
       });
-      navigate(location?.state? location.state: '/');
-    console.log(data); 
+    
+    
   };
 
-    return (
-        <div className="w-96 mx-auto">
-          <Helmet>
-      <title>LuxeVillas | Login</title>
-    </Helmet>
-            <ToastContainer></ToastContainer>
+  return (
+    <div className="w-96 mx-auto shadow-2xl bg-[#fff] rounded-lg pt-5">
+      <Helmet>
+        <title>LuxeVillas | Login</title>
+      </Helmet>
+      <ToastContainer></ToastContainer>
+      <h1 className=" text-center text-2xl font-bold">
+        Welcome to <span className=" text-[#006aff]">Luxe</span>Villas
+      </h1>
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-       
         <div className="form-control">
+          {error && <p className="text-red-500">{error}</p>}
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="Email" className="input input-bordered" {...register("email", { required: true })} />
-          {errors.name && <p className='text-red-500 ml-1'>Email is required.</p>}
+          <input
+            type="email"
+            placeholder="Email"
+            className="input input-bordered"
+            {...register("email", { required: true })}
+          />
+          {errors.name && (
+            <p className="text-red-500 ml-1">Email is required.</p>
+          )}
         </div>
-
-
 
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="Password" className="input input-bordered" {...register("password", { 
-            required: true,
-     
-          })} />
-          {errors.name && <p className='text-red-500 ml-1'>Password is required.</p>}
-         
-        
+          <input
+            type="password"
+            placeholder="Password"
+            className="input input-bordered"
+            {...register("password", {
+              required: true,
+            })}
+          />
+          {errors.name && (
+            <p className="text-red-500 ml-1">Password is required.</p>
+          )}
         </div>
-        
+
         <div className="form-control mt-6">
-          <button type="submit" className="btn btn-primary">Register</button>
+          <button type="submit" className="btn text-[#fff] bg-[#006aff]">
+            Sign In
+          </button>
         </div>
-        <div className='flex  items-center '>
-        <p>New User?</p>
-        <Link to="/signup"><button className='btn text-primary bg-slate-100'>SignUp</button></Link>
+        <div className="flex  items-center ">
+          <p>New User?</p>
+          <Link to="/signup">
+            <button className="btn text-[#006aff] bg-slate-100">SignUp</button>
+          </Link>
         </div>
         <SocialLogin></SocialLogin>
       </form>
-      
     </div>
-    );
+  );
 };
 
 export default Login;

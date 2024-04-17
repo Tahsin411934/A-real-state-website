@@ -10,6 +10,7 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/FirebaseConfig";
+import PropTypes from 'prop-types';
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
@@ -29,17 +30,15 @@ const AuthProvider = ({ children }) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: image,
-    })
-     
+    });
   };
 
   const signinUser = (email, password) => {
-    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const googleLogin = () => {
-    setLoading(true);
+    
     return signInWithPopup(auth, googleProvider);
   };
 
@@ -77,4 +76,8 @@ const AuthProvider = ({ children }) => {
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
 };
 
+
+AuthProvider.propTypes = {
+  children: PropTypes.children
+};
 export default AuthProvider;

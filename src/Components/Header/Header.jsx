@@ -13,7 +13,7 @@ const Header = () => {
         <button onClick={() => {
             logOut();
             navigate('/');
-        }} className="hidden ml-5 font-semibold no-underline lg:inline-flex items-center justify-center px-4 py-2 text-base leading-6 text-white whitespace-no-wrap bg-[#04aa6d] rounded-md shadow-sm">
+        }} className="hidden ml-5 font-semibold no-underline lg:inline-flex items-center justify-center px-4 py-2 text-base leading-6 text-white whitespace-no-wrap bg-[#006aff] rounded-md shadow-sm">
             Sign Out
         </button>
         <div className="tooltip tooltip-bottom z-50" data-tip={user.displayName}>
@@ -24,12 +24,12 @@ const Header = () => {
     ) : (
         <>
             <Link to="/login">
-                <button className="hidden ml-5 font-semibold no-underline lg:inline-flex items-center justify-center px-4 py-2 text-base leading-6 text-white whitespace-no-wrap bg-[#04aa6d]  rounded-md shadow-sm">
+                <button className="hidden ml-5 font-semibold no-underline lg:inline-flex items-center justify-center px-4 py-2 text-base hover:bg-[#588df0] hover:text-[#fff] leading-6 bg-slate-100 whitespace-no-wrap   rounded-md shadow-sm">
                     Sign In
                 </button>
             </Link>
             <Link to="/signup">
-                <button className="lg:ml-5 font-semibold no-underline inline-flex items-center justify-center px-4 py-2 text-base leading-6 text-white whitespace-no-wrap bg-[#59C6D2] rounded-md shadow-sm">
+                <button className="lg:ml-5 font-semibold no-underline inline-flex items-center justify-center px-4 py-2 text-base leading-6  hover:bg-[#588df0] hover:text-[#fff] bg-slate-100 whitespace-no-wrap  rounded-md shadow-sm">
                     Sign Up
                 </button>
             </Link>
@@ -45,12 +45,15 @@ const Header = () => {
             <NavLink className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline" to="/UpdateProfile">
                 <li>Update Profile</li>
             </NavLink>
+            <NavLink className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline" to="/CustomerExperiences">
+                <li>Customer Experiences</li>
+            </NavLink>
             
         </>
     );
 
     return (
-        <div className="WorkSansFont container mx-auto w-[95%] font-display">
+        <div className=" container mx-auto w-[95%] font-display ">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -66,7 +69,7 @@ const Header = () => {
                     </div>
                     
                     <img src="https://i.ibb.co/QDmF3vk/OIP-removebg-preview.png" alt="React Image"  className="btn w-24 -mr-7 "/>
-                    <a className="btn text-2xl font-bold text-[#131313]">LuxeVillas</a>
+                    <a className="btn text-2xl font-bold text-[#131313]" > <span className="-mr-2 text-[#006aff]">Luxe</span>Villas</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 flex">

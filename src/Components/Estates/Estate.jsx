@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
+import PropTypes from 'prop-types';
 const Estate = ({ estate }) => {
   const {
     id,
     estate_title,
     segment_name,
-    description,
     price,
-    status,
-    area,
-    location,
-    facilities,
-    image,
+   location,
+   image,
   } = estate;
  
   return (
@@ -38,7 +35,7 @@ const Estate = ({ estate }) => {
           
           
           <div className="card-actions">
-           <Link to={`/viewProperty/${id}`} ><button className="btn btn-primary">View Property</button></Link> 
+           <Link to={`/viewProperty/${id}`} ><button className="btn bg-[#006aff] text-[#fff]">View Property</button></Link> 
           </div>
         </div>
       </div>
@@ -46,4 +43,8 @@ const Estate = ({ estate }) => {
   );
 };
 
+
+Estate.propTypes = {
+  estate: PropTypes.node
+};
 export default Estate;
