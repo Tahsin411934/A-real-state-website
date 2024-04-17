@@ -1,8 +1,8 @@
 # LuxeVillas Website
-🌟  
+ 
 
 
-Welcome to LuxeVillas, your premier destination for luxury property listings. This README provides an overview of the website's features and functionalities, along with instructions on how to navigate the codebase.🚀✨
+🌟 Welcome to LuxeVillas, your premier destination for luxury property listings. This README provides an overview of the website's features and functionalities, along with instructions on how to navigate the codebase.🚀✨
 
 -👉 Visit my website Click: https://af-assignment-9.netlify.app/👈 
 ## Table of Contents
@@ -86,11 +86,10 @@ The 404 Page is displayed when a user navigates to a URL that does not exist on 
 
 named:  Customer Experiences
 
-    Customer Experiences protected route is added to the website to provide users with meaningful and relevant content. Here's what it includes:
-
-
 - **Customer Experiences with video**:
 In this section, we share real customer experiences through video testimonials. Hear directly from our satisfied customers about their experiences with our services.
+
+
 -- **FAQ**:
 Brief description of the customer's FAQ.
 
