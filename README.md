@@ -79,20 +79,40 @@ The 404 Page is displayed when a user navigates to a URL that does not exist on 
 - **Custom Error Message**: A friendly and informative message is displayed, informing users that the requested page could not be found.
 - **Navigation Options**: Links to the home page and other relevant pages are provided to help users continue navigating the website.
 
-### Extra Route
+### Extra Route 
 
-An additional protected route is added to the website to provide users with meaningful and relevant content. Here's what it includes:
+named:  Customer Experiences
 
-- **Protected Content**: The content displayed on the extra route is accessible only to authenticated users.
-- **Meaningful Content**: The content of the extra route is carefully chosen to add value to the website and enhance the user experience.
+    Customer Experiences protected route is added to the website to provide users with meaningful and relevant content. Here's what it includes:
+
+
+- **Customer Experiences with video**:
+In this section, we share real customer experiences through video testimonials. Hear directly from our satisfied customers about their experiences with our services.
+-- **FAQ**:
+Brief description of the customer's FAQ.
+
+
 
 ### Dynamic Title
 
-Dynamic titles are implemented for each page of the website using Firebase's `onAuthStateChanged` method. Here's what it includes:
+Dynamic titles are implemented for each page usin react helmet
 
-- **User Information**: Upon logging in, the user's name and profile picture are displayed in the Navbar. This information persists across page reloads.
-- **Loader**: While the user's information is being fetched, a loader is displayed to provide visual feedback to the user.
+## Challenges Requirements
 
-### Challenges Requirements
+1. **Password Toggle on Registration Page**:
+   - Implemented the functionality to show and hide passwords on the registration page.
+   - By default, passwords are hidden, and when users click on the "Eye" icon, the password is revealed.
+   - Implemented a toggle mechanism to switch between showing and hiding passwords.
 
-The challenges requirements are additional
+
+2. **Package Implementation**:
+   - Utilized the following packages:
+     - Animate.css (Option b): Integrated animations in the "Discover Your Dream Home" section.
+     - React Hook Form (Option d): Implemented form management for login, signup, and update profile sections.
+     - Swiper Slider (Option e): Incorporated dynamic banners using Swiper slider in the website's banner section.
+
+
+3. **Protected Route for User Profile Editing**:
+
+   Create a protected route where users, after logging in, can view their profile information, including their name, email, and photoURL. Users should be able to edit their name and photoURL directly within a form displayed on this route. Upon making changes, users should be able to save the updates, which will utilize Firebase's `updateProfile()` method to securely store the modified user information in Firebase.
+
