@@ -11,7 +11,7 @@ const Estates = () => {
       .then((data) => setEstates(data));
   }, []);
   return (
-    <div>
+    <div className="w-[95%]">
         <div className="animate__animated animate__backInUp mt-12 text-center p-1 rounded-xl" style={{ backgroundColor: 'rgba(19, 19, 19, 0.05)' }}>
                 <h1 className=' text-2xl lg:text-3xl font-bold text-[#131313]'>&quot; Discover Your Dream Home &quot;</h1>
                 <p className='text-slate-600'>

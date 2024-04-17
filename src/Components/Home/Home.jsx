@@ -13,7 +13,7 @@ const Home = () => {
     <Helmet>
       <title>LuxeVillas | Home</title>
     </Helmet>
-    <div className="container mx-auto font-display">
+    <div className="container mx-auto font-display w-[95%]">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

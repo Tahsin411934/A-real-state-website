@@ -34,7 +34,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="w-[60%] mx-auto text-center font-display mt-20">
+    <div className="lg:w-[60%] lg:mx-auto text-center font-display mt-20">
       <Helmet>
         <title>LuxeVillas | UpdateProfile</title>
       </Helmet>
