@@ -1,12 +1,11 @@
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import UseAuth from "../../Hooks/UseAuth";
-
 import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
   const { user, updateUserProfile, setUser } = UseAuth();
+  const [message, setMessage] = useState(null);
 
   const {
     register,
@@ -24,17 +23,18 @@ const UpdateProfile = () => {
   const onSubmit = (data) => {
     updateUserProfile(data.name, data.photoURL)
       .then(() => {
+        setMessage("Profile updated successfully!");
         setUser({ ...user, displayName: data.name, photoURL: data.photoURL });
-        toast.success("Profile updated successfully!");
         reset();
       })
       .catch((error) => {
-        toast.error("Failed to update profile. Please try again.", error);
+        setMessage("Failed to update profile. Please try again.");
       });
   };
 
   return (
     <div className="lg:w-[60%] lg:mx-auto text-center font-display mt-20">
+     
       <Helmet>
         <title>LuxeVillas | UpdateProfile</title>
       </Helmet>
@@ -98,7 +98,7 @@ const UpdateProfile = () => {
               <p className="text-red-500 ml-1">Photo URL is required</p>
             )}
           </div>
-
+          {message && <p className="text-lg text-green-500">{message}</p>}
           <div className="form-control mt-6">
             <button type="submit" className="btn text-[#fff] bg-[#006aff]">
               Update Profile
@@ -106,7 +106,6 @@ const UpdateProfile = () => {
           </div>
         </form>
       </div>
-      <ToastContainer></ToastContainer>
     </div>
   );
 };
