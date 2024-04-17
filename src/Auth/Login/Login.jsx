@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
+import {Helmet} from "react-helmet";
 import SocialLogin from '../../SocialLogin/SocialLogin';
 import UseAuth from '../../Hooks/UseAuth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -42,6 +42,9 @@ const Login = () => {
 
     return (
         <div className="w-96 mx-auto">
+          <Helmet>
+      <title>LuxeVillas | Login</title>
+    </Helmet>
             <ToastContainer></ToastContainer>
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
        

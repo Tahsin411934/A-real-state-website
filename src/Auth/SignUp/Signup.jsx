@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import UseAuth from '../../Hooks/UseAuth';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import {Helmet} from "react-helmet";
 
 const Signup = () => {
     const {createUser, updateUserProfile,setUser }= UseAuth()
@@ -38,7 +38,9 @@ const Signup = () => {
 
   return (
     <div className="w-96 mx-auto">
-        
+        <Helmet>
+      <title>LuxeVillas | Signup</title>
+    </Helmet>
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control">
           <label className="label">

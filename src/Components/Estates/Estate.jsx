@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { CiLocationOn } from "react-icons/ci";
 const Estate = ({ estate }) => {
   const {
     id,
@@ -27,7 +27,12 @@ const Estate = ({ estate }) => {
         <div className="card-body items-center text-center">
           <h2 className="card-title">{estate_title} |  {segment_name}</h2>
           <div className="flex items-center gap-10">
-          <p>{location}</p>
+            <div className="flex items-center gap-1">
+              <CiLocationOn />
+              <p>{location}</p>
+            
+            </div>
+          
           <p>Price: {price}</p>
           </div>
           
