@@ -6,7 +6,7 @@
 -👉 Visit my website Click: https://af-assignment-9.netlify.app/👈 
 
 ## Selected Category : Residential
-            (according to Assignment - 9 Requirements)
+            -according to Assignment - 9 Requirements
 
 ## Table of Contents
 
