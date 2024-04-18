@@ -16,7 +16,7 @@ const SocialLogin = () => {
         navigate("/")
     })
     .catch((error)=>{
-        toast.error(error.Message);
+       console.log(error.Message);
     })
 }
    const handleGithubLogin=()=>{

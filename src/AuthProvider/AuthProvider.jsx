@@ -17,15 +17,19 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  console.log(user);
+  //PROVIDER
   const googleProvider = new GoogleAuthProvider();
   const GithubProvider = new GithubAuthProvider();
 
+
+  //createUserWithEmailAndPassword
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+
+  //updateProfile
   const updateUserProfile = (name, image) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
@@ -33,19 +37,26 @@ const AuthProvider = ({ children }) => {
     });
   };
 
+
+  //signInWithEmailAndPassword
   const signinUser = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const googleLogin = () => {
-    
+
+  //googleLogin
+  const googleLogin = () => { 
     return signInWithPopup(auth, googleProvider);
   };
 
+
+  //githubLogin
   const githubLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, GithubProvider);
   };
+
+//logOut
   const logOut = () => {
     setLoading(false);
     return signOut(auth);

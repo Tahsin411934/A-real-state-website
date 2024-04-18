@@ -4,18 +4,16 @@ import SocialLogin from "../../SocialLogin/SocialLogin";
 import UseAuth from "../../Hooks/UseAuth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
-const Login = () => {
-  
+
+
+
+
+
+const Login = () => { 
   const [error, setError] = useState(null);
   const location = useLocation();
-
-
   const {  signinUser, setLoading } = UseAuth();
- 
-
   const navigate = useNavigate();
   const {
     register,
@@ -25,7 +23,8 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    
+
+//SIGN IN WITH EMAIL AND PASSWORD FUNCIONALITY
     signinUser(data.email, data.password)
       .then(() => {
         setLoading(true);
@@ -34,14 +33,11 @@ const Login = () => {
       })
       .catch((error) => {
         const errorMessage = error.message;
-        toast.error(errorMessage);
         setError(errorMessage);
         setLoading(false);
         reset()
         
-      });
-    
-    
+      });   
   };
 
   return (
@@ -49,7 +45,7 @@ const Login = () => {
       <Helmet>
         <title>LuxeVillas | Login</title>
       </Helmet>
-      <ToastContainer></ToastContainer>
+     
       <h1 className=" text-center text-2xl font-bold">
         Welcome to <span className=" text-[#006aff]">Luxe</span>Villas
       </h1>

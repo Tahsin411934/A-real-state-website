@@ -1,11 +1,14 @@
-import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import UseAuth from "../../Hooks/UseAuth";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
 
+//UPDATE PROFILE FUNCIONALITY
 const UpdateProfile = () => {
   const { user, updateUserProfile, setUser } = UseAuth();
   const [message, setMessage] = useState(null);
+ 
+  
 
   const {
     register,
@@ -15,47 +18,40 @@ const UpdateProfile = () => {
   } = useForm({
     defaultValues: {
       name: user.displayName,
-      email: user.email,
+      email: user.email, 
       photoURL: user.photoURL,
     },
   });
 
+
+//
   const onSubmit = (data) => {
     updateUserProfile(data.name, data.photoURL)
       .then(() => {
         setMessage("Profile updated successfully!");
-        setUser({ ...user, displayName: data.name, photoURL: data.photoURL });
+        setUser({...user, displayName: data.name, photoURL: data.photoURL });
         reset();
-      })
-      .catch((error) => {
-        setMessage("Failed to update profile. Please try again.");
       });
   };
 
   return (
     <div className="lg:w-[60%] lg:mx-auto text-center font-display mt-20">
-     
       <Helmet>
         <title>LuxeVillas | UpdateProfile</title>
       </Helmet>
       <div className="">
-        <h1 className="mb-5 text-4xl font-medium text-[#1c1c1c]">
-          UpdateProfile
-        </h1>
+        <h1 className="mb-5 text-4xl font-medium text-[#1c1c1c]">UpdateProfile</h1>
         <p className="mb-5 text-slate-600 font-normal">
-          Explore Our Exquisite Collection of Residential Estates: Where Dreams
-          Meet Reality
+          Explore Our Exquisite Collection of Residential Estates: Where Dreams Meet Reality
         </p>
       </div>
       <div className="w-96 mx-auto">
         <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-          <button className="">
-            <img
-              alt=""
-              className="w-32 mx-auto h-32 rounded-full ring-2 ring-offset-4 "
-              src={user.photoURL}
-            />
-          </button>
+          <img
+            alt=""
+            className="w-32 mx-auto h-32 rounded-full ring-2 ring-offset-4"
+            src={user.photoURL}
+          />
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
@@ -79,8 +75,8 @@ const UpdateProfile = () => {
               type="email"
               placeholder="Email"
               className="input input-bordered"
-              {...register("email", { required: true })}
-              disabled
+              value={user.email} 
+              readOnly 
             />
           </div>
 

@@ -1,9 +1,18 @@
 import { IoCall } from "react-icons/io5";
+import 'animate.css';
+import { Helmet } from "react-helmet";
+
+
+
 
 const CustomerExperiences = () => {
   return (
     <div className="container mx-auto mt-20">
-      <div className="w-[60%] mx-auto text-center font-display">
+<Helmet>
+        <title>LuxeVillas |  Customer Experiences </title>
+      </Helmet>
+      {/* Customer Experiences SECTION*/}
+      <div className="animate__animated animate__backInUp w-[60%] mx-auto text-center font-display">
         <h1 className="mb-5 text-4xl font-medium text-[#1c1c1c]">
           Customer Experiences
         </h1>
@@ -41,6 +50,9 @@ const CustomerExperiences = () => {
           allowfullscreen
         ></iframe>
       </div>
+
+
+      {/* Frequently Asked Questions SECTION */}
       <div className="w-[60%] mx-auto text-center font-display">
         <h1 className="mb-20 text-4xl font-medium text-[#1c1c1c]">
           Frequently Asked Questions

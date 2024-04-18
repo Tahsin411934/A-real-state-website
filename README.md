@@ -1,10 +1,13 @@
 # LuxeVillas Website
  
 
-
-🌟 Welcome to LuxeVillas, your premier destination for luxury property listings. This README provides an overview of the website's features and functionalities, along with instructions on how to navigate the codebase.🚀✨
+🌟 Welcome to LuxeVillas, your premier destination for luxury property listings. 🚀✨
 
 -👉 Visit my website Click: https://af-assignment-9.netlify.app/👈 
+
+## Selected Category : Residential
+            (according to Assignment - 9 Requirements)
+
 ## Table of Contents
 
 1. [Navbar](#navbar)
@@ -34,7 +37,7 @@ The Navbar is a crucial component of the website, providing navigation links and
 
 The Login Page is where users can authenticate themselves to access their accounts. Here's what it includes:
 
-- **Authentication Methods**: Users can log in using their email and password. Additionally, social media authentication methods such as Google login are implemented to provide users with alternative login options.
+- **Authentication Methods**: Users can log in using their email and password. Additionally, social media authentication methods such as Google login and github log are implemented to provide users with alternative login options.
 - **Error Handling**: The login page handles authentication errors gracefully, displaying appropriate error messages if the email/password combination is incorrect.
 - **Registration Link**: For new users, a link is provided to the Register Page where they can create a new account.
 
@@ -48,39 +51,29 @@ The Register Page allows new users to create an account on the website. Here's w
 
 ### Banner
 
-The Banner section features a slider component that showcases various properties available on the website. Here's what it includes:
-
-- **Slider Component**: A slider component, implemented using the Swiper slider package, displays multiple property listings in a visually appealing and interactive manner.
-- **Property Listings**: Each slide in the slider displays images and key information about a specific property, such as its title, price, and location.
+The Banner section features a slider component that showcases various properties available on the website. 
 
 ### Footer
 
 The Footer appears at the bottom of every page and provides users with additional information and navigation options. Here's what it includes:
 
-- **Contact Information**: Contact details, including email address and phone number, are provided for users to reach out to the website administrators.
-- **Company Information**: Relevant information about the company or organization behind the website is displayed, helping users understand the context of the website.
-- **Navigation Links**: Links to important pages within the website, such as the home page, property listings, and user account settings, are included to facilitate navigation.
 
 ### Estate Section
 
 The Estate Section displays various properties available for sale or rent. Here's what it includes:
 
 - **Property Categories**: Properties are categorized based on their type (e.g., Residential, Commercial).
-- **Property Listings**: Each property listing includes images, title, description, price, status (sale/rent), area, location, facilities, and a "View Property" button for more details.
+- **Property Listings**: Each property listing includes images, title, price,  location, facilities, and a "View Property" button for more details.
 
 ### Estate Details
 
 The Estate Details page provides in-depth information about a selected property. Here's what it includes:
 
-- **Detailed Information**: Detailed information about the selected property, including images, description, price, location, and facilities, is displayed.
-- **Protected Route**: Access to the Estate Details page is restricted to authenticated users. Unauthorized users are redirected to the Login Page.
+
 
 ### 404 Page
 
-The 404 Page is displayed when a user navigates to a URL that does not exist on the website. Here's what it includes:
-
-- **Custom Error Message**: A friendly and informative message is displayed, informing users that the requested page could not be found.
-- **Navigation Options**: Links to the home page and other relevant pages are provided to help users continue navigating the website.
+The 404 Page is displayed when a user navigates to a URL that does not exist on the website. 
 
 ### Extra Route 
 
@@ -109,9 +102,9 @@ Dynamic titles are implemented for each page usin react helmet
 
 2. **Package Implementation**:
    - Utilized the following packages:
-     - Animate.css (Option b): Integrated animations in the "Discover Your Dream Home" section.
-     - React Hook Form (Option d): Implemented form management for login, signup, and update profile sections.
-     - Swiper Slider (Option e): Incorporated dynamic banners using Swiper slider in the website's banner section.
+     - Animate.css : Integrated animations in the "Discover Your Dream Home" section.
+     - React Hook Form : Implemented form management for login, signup, and update profile sections.
+     - Swiper Slider : Incorporated dynamic banners using Swiper slider in the website's banner section.
 
 
 3. **Protected Route for User Profile Editing**:

@@ -8,10 +8,12 @@ import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 
+
+
+
 const Signup = () => {
   const [passError, setPassError] = useState(null);
   const [pass, setPass] = useState(false);
-
   const { createUser, updateUserProfile, setUser } = UseAuth();
   const navigate = useNavigate();
   
@@ -23,9 +25,11 @@ const Signup = () => {
   } = useForm();
 
 
-
+//SUBMIT FORM FUNCIONALITY
   const onSubmit = (data) => {
     setPassError('')
+console.log(data.email)
+//SET ERROR MESSAGE
     if(data.password.length<6){
       setPassError("Password Length must be at least 6 character")
       return;
@@ -38,6 +42,7 @@ const Signup = () => {
       setPassError('Password must contain at least one lower letter');
       return;
     }
+//USER CREATE FUNCIONALITY
     createUser(data.email, data.password)
       .then((userCredential) => {
         const user = userCredential.user;
@@ -63,6 +68,8 @@ const Signup = () => {
       });
   };
 
+
+ //PASSWORD TOGGLE FUNCTIONALITY 
  const  handlePassword=()=>{
   setPass(!pass)
  }
@@ -122,6 +129,9 @@ const Signup = () => {
               className="input input-bordered"
               {...register("photoURL", { required: true })}
             />
+             {errors.photoURL && (
+              <p className="text-red-500 ml-1">photoURL is required</p>
+            )}
           </div>
 
 

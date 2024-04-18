@@ -1,13 +1,13 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import "../../Styles/Header.css";
 import UseAuth from "../../Hooks/UseAuth";
-
 const Header = () => {
   const { user, logOut } = UseAuth();
-  console.log(user);
+ 
 
   const navigate = useNavigate();
-  console.log(user);
+  
+//  SET conditinal nav Route
   const viewLink = user ? (
     <div className="flex gap-5">
       <button
@@ -19,6 +19,8 @@ const Header = () => {
       >
         Sign Out
       </button>
+
+      {/* USER PROFILE */}
       <div className="tooltip tooltip-bottom z-50" data-tip={user.displayName}>
         <img
           alt=""

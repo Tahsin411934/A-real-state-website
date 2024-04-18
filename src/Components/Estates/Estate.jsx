@@ -27,13 +27,9 @@ const Estate = ({ estate }) => {
             <div className="flex items-center gap-1">
               <CiLocationOn />
               <p>{location}</p>
-            
             </div>
-          
           <p>Price: {price}</p>
           </div>
-          
-          
           <div className="card-actions">
            <Link to={`/viewProperty/${id}`} ><button className="btn bg-[#006aff] text-[#fff]">View Property</button></Link> 
           </div>
@@ -42,7 +38,6 @@ const Estate = ({ estate }) => {
     </div>
   );
 };
-
 
 Estate.propTypes = {
   estate: PropTypes.node

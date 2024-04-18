@@ -10,10 +10,13 @@ import Estates from "../Estates/Estates";
 const Home = () => {
   return (
     <>
+
+    {/* //react helmet */}
     <Helmet>
       <title>LuxeVillas | Home</title>
     </Helmet>
     <div className="container mx-auto font-display w-[95%]">
+    
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -28,6 +31,7 @@ const Home = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
+          {/* SwiperSlide 1 */}
         <SwiperSlide>
           <div
             className="bg-cover bg-center hero min-h-screen w-full h-[550px] bg-gradient-to-r from-slate-900 to-black rounded-2xl "
@@ -63,6 +67,7 @@ Enter an Address, Nearby City, or Zip Code to Begin Your Search"
             </div>
           </div>
         </SwiperSlide>
+          {/* SwiperSlide 2 */}
         <SwiperSlide>
           <div
             className=" bg-cover bg-center hero min-h-screen w-full h-[550px] bg-gradient-to-r from-slate-900 to-black rounded-2xl"
@@ -96,6 +101,9 @@ Enter an Address, Nearby City, or Zip Code to Begin Your Search"
             </div>
           </div>
         </SwiperSlide>
+
+
+          {/* SwiperSlide 3 */}
         <SwiperSlide className="w-screen">
           <div
             className=" bg-cover bg-center hero min-h-screen w-full h-[550px] bg-gradient-to-r from-slate-900 to-black rounded-2xl"
